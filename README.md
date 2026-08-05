@@ -32,6 +32,7 @@ These datasets are formatted for easy ingestion into any major SIEM, log analysi
 
 ---
 
+
 ## 🕵️‍♂️ Threat Hunting & Sample Queries
 
 Use these sample queries to extract the hidden attack vectors within the datasets.
@@ -62,12 +63,14 @@ index=windows EventCode=4625
 | stats count by TargetUserName, IpAddress 
 | where count > 10]
 
+
 Microsoft Sentinel (KQL):
 [Code snippet
 SecurityEvent
 | where EventID == 4625
 | summarize count() by TargetUserName, IpAddress
 | where count_ > 10]
+
 
 
 3. Suspicious Outbound Network Traffic (C2 Beaconing)
@@ -79,10 +82,18 @@ index=firewall action=allowed dest_port!=80 dest_port!=443
 | stats sum(bytes_out) as total_outbound by src_ip, dest_ip, dest_port
 | where total_outbound > 50000]
 
+
+
+
 Linux CLI:
 
 Bash
 [awk '$5 != "80" && $5 != "443" && $7 == "allowed" {print $3, $4, $5}' firewall_traffic.log | sort | uniq -c | sort -nr]
+
+
+
+
+
 
 
 🤝 Support & Visibility
