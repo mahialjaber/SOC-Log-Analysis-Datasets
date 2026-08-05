@@ -32,14 +32,64 @@ These datasets are formatted for easy ingestion into any major SIEM, log analysi
 
 ---
 
-## 🤝 Support & Visibility
+## 🕵️‍♂️ Threat Hunting & Sample Queries
 
+Use these sample queries to extract the hidden attack vectors within the datasets.
+
+### 1. Web Application Attacks (SQL Injection & XSS)
+* **Target File:** `Applications/web_server_access.log`
+* **Splunk SPL:**
+  ```splunk
+  index=web sourcetype=access_combined 
+  | search uri_query="*UNION*" OR uri_query="*SELECT*" OR uri_query="*<script>*"
+  | stats count by src_ip, uri_query, status
+  | sort - count
+
+
+Linux CLI:
+
+Bash:
+      (grep -iE "union.*select|%27|<script>" web_server_access.log)
+
+
+2. Windows Authentication Brute Force
+Target File: Endpoints/windows_security_events.log
+
+Splunk SPL:
+
+Code snippet
+index=windows EventCode=4625 
+| stats count by TargetUserName, IpAddress 
+| where count > 10
+Microsoft Sentinel (KQL):
+
+Code snippet
+SecurityEvent
+| where EventID == 4625
+| summarize count() by TargetUserName, IpAddress
+| where count_ > 10
+3. Suspicious Outbound Network Traffic (C2 Beaconing)
+Target File: Network/firewall_traffic.log
+
+Splunk SPL:
+
+Code snippet
+index=firewall action=allowed dest_port!=80 dest_port!=443 
+| stats sum(bytes_out) as total_outbound by src_ip, dest_ip, dest_port
+| where total_outbound > 50000
+Linux CLI:
+
+Bash
+awk '$5 != "80" && $5 != "443" && $7 == "allowed" {print $3, $4, $5}' firewall_traffic.log | sort | uniq -c | sort -nr
+
+
+🤝 Support & Visibility
 If you found this dataset helpful for your studies, certifications, or lab setup, please do two things:
 
-1. ⭐ **Star this repository** so it reaches other analysts who need it.
-2. 👤 **Follow my GitHub profile** to stay updated on future defensive security projects and SOC tools. 
+⭐ Star this repository so it reaches other analysts who need it.
 
-*Building resources for the community takes time. Your support pushes this project to the top of GitHub search results.*
+👤 Follow my GitHub profile to stay updated on future defensive security projects and SOC tools.
 
----
-**License:** MIT License - Free to use, modify, and distribute for any educational or commercial purpose.
+Building resources for the community takes time. Your support pushes this project to the top of GitHub search results.
+
+License: MIT License - Free to use, modify, and distribute for any educational or commercial purpose.
