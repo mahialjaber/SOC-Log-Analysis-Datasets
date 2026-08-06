@@ -153,7 +153,7 @@ index=dlp sourcetype=email_gateway
 | sort - count
 ```
 
-### 4. Windows Authentication Brute Force
+### 4. Windows Authentication Brute Force 
 **Target:** `Endpoints/windows_security_events.log`
 
 **Splunk SPL**
