@@ -97,8 +97,15 @@ cd SOC-Log-Analysis-Datasets
 ```
 
 **2. Unzip the dataset(s) you want to work with**
+
+*Linux / macOS:*
 ```bash
 unzip Network/firewall_traffic.log.zip -d Network/
+```
+
+*Windows (PowerShell):*
+```powershell
+Expand-Archive -Path Network/firewall_traffic.log.zip -DestinationPath Network/
 ```
 
 **3. Ingest into your tool of choice**
@@ -142,6 +149,11 @@ index=cloud sourcetype=cloud_audit
 | where count > 3
 ```
 
+**CLI**
+```bash
+grep -iE "AttachUserPolicy|PutUserPolicy|CreateAccessKey|DeleteTrail" cloud_activity_audit.log
+```
+
 ### 3. Phishing & Data Exfiltration
 **Target:** `Email_and_DLP/dlp_events.log`, `Email_and_DLP/email_gateway_events.jsonl`
 
@@ -151,6 +163,11 @@ index=dlp sourcetype=email_gateway
 | search action="blocked" OR category="phishing" OR category="exfiltration"
 | stats count by sender, recipient, attachment_name
 | sort - count
+```
+
+**CLI**
+```bash
+grep -iE "phishing|exfiltration|blocked" dlp_events.log
 ```
 
 ### 4. Windows Authentication Brute Force
@@ -169,6 +186,11 @@ SecurityEvent
 | where EventID == 4625
 | summarize count() by TargetUserName, IpAddress
 | where count_ > 10
+```
+
+**CLI**
+```bash
+grep -i "4625" windows_security_events.log
 ```
 
 ### 5. C2 Beaconing
@@ -224,10 +246,20 @@ Contributions are welcome.
 
 Ideas for contributions: new attack scenarios, additional log formats (Azure/GCP audit logs, EDR telemetry, Kubernetes audit logs), Sigma or YARA rule mappings, or fixes to existing queries.
 
+## 🗺️ Roadmap
+
+- [ ] Detailed threat hunting solutions & ground truth answer keys
+- [ ] Sigma rule repository mapped to each simulated attack vector
+- [ ] Cloud audit expansion (Azure Activity Logs & Google Cloud Audit Logs)
+- [ ] Pre-configured Docker Compose environment for automated log ingestion (Splunk & Elastic)
+
 ## ❓ FAQ
 
 **Is this real attack data?**
 No. Everything is synthetic and simulated, purpose-built for training. No real breach data, credentials, or PII is included.
+
+**Why are the log files provided as `.zip` archives?**
+The raw log files contain tens of thousands of event records (multiple megabytes uncompressed). Compressing them keeps repository download fast and lightweight while preserving the raw formatting when extracted.
 
 **What SIEM do I need?**
 None, strictly speaking. The formats work with Splunk, the Elastic Stack, Microsoft Sentinel, or nothing more than `grep`/`awk`/`jq` on the command line.
