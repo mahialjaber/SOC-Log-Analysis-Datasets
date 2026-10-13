@@ -30,14 +30,14 @@ If you're a student, a SOC analyst, or a threat hunter, this dataset is built fo
 
 - [✨ Key Features](#-key-features)
 - [📂 What's Inside](#-whats-inside)
-- [🗂️ Repository Structure](#-repository-structure)
+- [🗂️ Repository Structure](#️-repository-structure)
 - [🚀 Getting Started](#-getting-started)
-- [🕵️ Threat Hunting Playbook](#-threat-hunting-playbook)
+- [🕵️ Threat Hunting Playbook](#️-threat-hunting-playbook)
 - [🎓 Who This Is For](#-who-this-is-for)
 - [🤝 Contributing](#-contributing)
-- [🗺️ Roadmap](#-roadmap)
+- [🗺️ Roadmap](#️-roadmap)
 - [❓ FAQ](#-faq)
-- [⚠️ Disclaimer](#-disclaimer)
+- [⚠️ Disclaimer](#️-disclaimer)
 - [📄 License](#-license)
 - [⭐ Support This Project](#-support-this-project)
 
@@ -144,14 +144,14 @@ grep -iE "union.*select|%27|<script>" web_server_access.log
 **Splunk SPL**
 ```spl
 index=cloud sourcetype=cloud_audit
-| search eventName IN ("AttachUserPolicy", "PutUserPolicy", "CreateAccessKey", "DeleteTrail")
-| stats count by user, eventName, sourceIPAddress
+| search event_name IN ("PrivilegeEscalation", "CreateAccessKey", "AssumeRole", "StopLogging")
+| stats count by actor, event_name, source_ip
 | where count > 3
 ```
 
 **CLI**
 ```bash
-grep -iE "AttachUserPolicy|PutUserPolicy|CreateAccessKey|DeleteTrail" cloud_activity_audit.log
+grep -iE "PrivilegeEscalation|CreateAccessKey|AssumeRole|StopLogging" cloud_activity_audit.log
 ```
 
 ### 3. Phishing & Data Exfiltration
@@ -175,8 +175,8 @@ grep -iE "phishing|exfiltration|blocked" dlp_events.log
 
 **Splunk SPL**
 ```spl
-index=windows EventCode=4625
-| stats count by TargetUserName, IpAddress
+index=windows event_id=4625
+| stats count by user, source_ip
 | where count > 10
 ```
 
@@ -198,14 +198,14 @@ grep -i "4625" windows_security_events.log
 
 **Splunk SPL**
 ```spl
-index=firewall action=allowed dest_port!=80 dest_port!=443
-| stats sum(bytes_out) as total_outbound by src_ip, dest_ip, dest_port
+index=firewall action=ALLOW dst_port!=80 dst_port!=443
+| stats sum(bytes) as total_outbound by src_ip, dst_ip, dst_port
 | where total_outbound > 50000
 ```
 
 **CLI**
 ```bash
-awk '$5 != "80" && $5 != "443" && $7 == "allowed" {print $3, $4, $5}' firewall_traffic.log | sort | uniq -c | sort -nr
+awk '$6 != "dst_port=80" && $6 != "dst_port=443" && $9 == "action=ALLOW" {print $3, $5, $6}' firewall_traffic.log | sort | uniq -c | sort -nr
 ```
 
 ### 6. DNS Tunneling
@@ -216,13 +216,13 @@ awk '$5 != "80" && $5 != "443" && $7 == "allowed" {print $3, $4, $5}' firewall_t
 index=dns sourcetype=dns_query
 | eval query_length=len(query)
 | where query_length > 50
-| stats count by src_ip, query
+| stats count by client_ip, query
 | sort - count
 ```
 
 **CLI (jq)**
 ```bash
-jq -r 'select((.query | length) > 50) | [.src_ip, .query] | @tsv' dns_query_logs.jsonl
+jq -r 'select((.query | length) > 50) | [.client_ip, .query] | @tsv' dns_query_logs.jsonl
 ```
 
 > 💡 **Tip:** Run each query against its target file, then tune the thresholds. Real detection engineering is as much about cutting false positives as it is about finding the signal.
@@ -268,7 +268,7 @@ None, strictly speaking. The formats work with Splunk, the Elastic Stack, Micros
 Yes — it's MIT licensed, so educational and commercial use are both fine. A credit or link back is appreciated but not required.
 
 **How do I know if I found the "right" answer?**
-Start with the sample queries in the [Threat Hunting Playbook](#-threat-hunting-playbook) above and tune from there. An answer-key branch is on the [roadmap](#-roadmap).
+Start with the sample queries in the [Threat Hunting Playbook](#️-threat-hunting-playbook) above and tune from there. An answer-key branch is on the [roadmap](#️-roadmap).
 
 ## ⚠️ Disclaimer
 
