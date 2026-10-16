@@ -11,6 +11,7 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/mahialjaber/SOC-Log-Analysis-Datasets)
 ![Built for Blue Teams](https://img.shields.io/badge/Built%20for-Blue%20Teams-blue)
 ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
+[![Buy Mahi a Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-Support%20Project-FFDD00?style=flat&logo=buy-me-a-coffee&logoColor=black)](https://mahialjaber.lemonsqueezy.com/checkout/buy/7460b413-f840-4930-b4fc-6ea155476086)
 
 </div>
 
@@ -282,6 +283,7 @@ Released under the [MIT License](LICENSE) — free to use, modify, and distribut
 
 If this dataset helped with your studies, certifications, or lab setup:
 
+- ☕ **[Buy Mahi a Coffee](https://mahialjaber.lemonsqueezy.com/checkout/buy/7460b413-f840-4930-b4fc-6ea155476086)** — Support continuous dataset generation, lab compute, and open-source defensive research
 - ⭐ **Star** this repository so it reaches other analysts who need it
 - 👤 **Follow** [@mahialjaber](https://github.com/mahialjaber) for future defensive security projects and SOC tooling
 - 🍴 **Fork** it and share what you build
