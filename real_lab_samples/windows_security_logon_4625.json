@@ -1,0 +1,84 @@
+[
+  {
+    "timestamp": "2026-10-18T14:30:12.891Z",
+    "win": {
+      "system": {
+        "providerName": "Microsoft-Windows-Security-Auditing",
+        "providerGuid": "{54849625-5478-4994-A5BA-3E3B0328C30D}",
+        "eventID": "4625",
+        "version": "2",
+        "level": "0",
+        "task": "12544",
+        "opcode": "0",
+        "keywords": "0x8010000000000000",
+        "systemTime": "2026-10-18T14:30:12.8910243Z",
+        "eventRecordID": "581902",
+        "channel": "Security",
+        "computer": "windows-vm-01.corp.internal",
+        "severityValue": "AUDIT_FAILURE"
+      },
+      "eventdata": {
+        "subjectUserSid": "S-1-0-0",
+        "subjectUserName": "-",
+        "subjectDomainName": "-",
+        "subjectLogonId": "0x0",
+        "targetUserSid": "S-1-0-0",
+        "targetUserName": "Administrator",
+        "targetDomainName": "CORP",
+        "status": "0xc000006d",
+        "failureReason": "%%2313",
+        "subStatus": "0xc000006a",
+        "logonType": "10",
+        "logonProcessName": "User32",
+        "authenticationPackageName": "Negotiate",
+        "workstationName": "windows-vm-01",
+        "transmittedServices": "-",
+        "lmPackageName": "-",
+        "keyLength": "0",
+        "processId": "0x3ac",
+        "processName": "C:\\Windows\\System32\\winlogon.exe",
+        "ipAddress": "192.168.198.128",
+        "ipPort": "53184"
+      }
+    }
+  },
+  {
+    "timestamp": "2026-10-18T14:31:05.102Z",
+    "win": {
+      "system": {
+        "providerName": "Microsoft-Windows-Security-Auditing",
+        "providerGuid": "{54849625-5478-4994-A5BA-3E3B0328C30D}",
+        "eventID": "4624",
+        "version": "2",
+        "level": "0",
+        "task": "12544",
+        "opcode": "0",
+        "keywords": "0x8020000000000000",
+        "systemTime": "2026-10-18T14:31:05.1023812Z",
+        "eventRecordID": "581903",
+        "channel": "Security",
+        "computer": "windows-vm-01.corp.internal",
+        "severityValue": "AUDIT_SUCCESS"
+      },
+      "eventdata": {
+        "subjectUserSid": "S-1-0-0",
+        "subjectUserName": "-",
+        "subjectDomainName": "-",
+        "subjectLogonId": "0x0",
+        "targetUserSid": "S-1-5-21-392817482-1928371928-192837192-500",
+        "targetUserName": "Administrator",
+        "targetDomainName": "CORP",
+        "targetLogonId": "0x3d2a1b",
+        "logonType": "10",
+        "logonProcessName": "User32",
+        "authenticationPackageName": "Negotiate",
+        "workstationName": "windows-vm-01",
+        "logonGuid": "{00000000-0000-0000-0000-000000000000}",
+        "processId": "0x3ac",
+        "processName": "C:\\Windows\\System32\\winlogon.exe",
+        "ipAddress": "192.168.198.128",
+        "ipPort": "53186"
+      }
+    }
+  }
+]

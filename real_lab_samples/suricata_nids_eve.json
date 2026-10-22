@@ -1,0 +1,26 @@
+[
+  {
+    "timestamp": "2026-10-18T14:45:22.912401+0000",
+    "flow_id": 182947192847192,
+    "in_iface": "eth0",
+    "event_type": "alert",
+    "src_ip": "192.168.198.128",
+    "src_port": 49152,
+    "dest_ip": "192.168.198.132",
+    "dest_port": 22,
+    "proto": "TCP",
+    "alert": {
+      "action": "allowed",
+      "gid": 1,
+      "signature_id": 86601,
+      "rev": 1,
+      "signature": "ET SCAN Potential Nmap Scripting Engine Probe / Rapid Port Sweep",
+      "category": "Attempted Information Leak",
+      "severity": 2
+    },
+    "tcp": {
+      "tcp_flags": "02",
+      "syn": true
+    }
+  }
+]
