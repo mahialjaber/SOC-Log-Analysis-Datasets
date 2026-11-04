@@ -11,7 +11,6 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/mahialjaber/SOC-Log-Analysis-Datasets)
 ![Built for Blue Teams](https://img.shields.io/badge/Built%20for-Blue%20Teams-blue)
 ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
-[![Buy Mahi a Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-Support%20Project-FFDD00?style=flat&logo=buy-me-a-coffee&logoColor=black)](https://mahialjaber.lemonsqueezy.com/checkout/buy/7460b413-f840-4930-b4fc-6ea155476086)
 
 </div>
 
