@@ -292,8 +292,6 @@ Released under the [MIT License](LICENSE) — free to use, modify, and distribut
 ## ⭐ Support This Project
 
 If this dataset helped with your studies, certifications, or lab setup:
-
-- ☕ **[Buy Mahi a Coffee](https://mahialjaber.lemonsqueezy.com/checkout/buy/7460b413-f840-4930-b4fc-6ea155476086)** — Support continuous dataset generation, lab compute, and open-source defensive research
 - ⭐ **Star** this repository so it reaches other analysts who need it
 - 👤 **Follow** [@mahialjaber](https://github.com/mahialjaber) for future defensive security projects and SOC tooling
 - 🍴 **Fork** it and share what you build
