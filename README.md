@@ -18,7 +18,7 @@
 
 > 🔍 **Real attack patterns. Zero real-world risk.** Every log file blends normal background noise with deliberately embedded attack vectors — so you can practice detection without needing an actual breach.
 
-## 🤔 Why This Exists
+## Why This Exists
 
 Finding realistic log data for threat hunting practice is surprisingly hard. Clean, normal-activity logs teach you nothing about detection. Massive raw dumps from public breach archives are unstructured, unlabeled, and overwhelming to parse. Real incident data is — rightly — locked down.
 
