@@ -295,6 +295,8 @@ If this dataset helped with your studies, certifications, or lab setup:
 - 👤 **Follow** [@mahialjaber](https://github.com/mahialjaber) for future defensive security projects and SOC tooling
 - 🍴 **Fork** it and share what you build
 
+> 🛠️ **If you find this dataset useful**, give **[Decodora](https://github.com/mahialjaber/Decodora)** ([live offline tool](https://mahialjaber.github.io/Decodora/)) a try — a zero-recipe payload unwrapper and defanged IOC extractor built to save time during SOC triage.
+
 Building resources like this for the community takes time — every star genuinely helps it reach the next analyst who needs it.
 
 ---
