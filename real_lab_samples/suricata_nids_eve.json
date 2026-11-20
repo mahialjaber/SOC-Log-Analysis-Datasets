@@ -1,26 +1,162 @@
 [
   {
-    "timestamp": "2026-10-18T14:45:22.912401+0000",
-    "flow_id": 182947192847192,
-    "in_iface": "eth0",
+    "timestamp": "2026-10-18T14:45:19.104822+0000",
+    "flow_id": 1749203851640218,
+    "in_iface": "ens160",
     "event_type": "alert",
     "src_ip": "192.168.198.128",
     "src_port": 49152,
     "dest_ip": "192.168.198.132",
     "dest_port": 22,
     "proto": "TCP",
+    "pkt_src": "wire/pcap",
     "alert": {
       "action": "allowed",
       "gid": 1,
-      "signature_id": 86601,
-      "rev": 1,
-      "signature": "ET SCAN Potential Nmap Scripting Engine Probe / Rapid Port Sweep",
+      "signature_id": 2001219,
+      "rev": 20,
+      "signature": "ET SCAN Potential SSH Scan",
       "category": "Attempted Information Leak",
       "severity": 2
     },
     "tcp": {
       "tcp_flags": "02",
-      "syn": true
+      "syn": true,
+      "state": "syn_sent"
+    }
+  },
+  {
+    "timestamp": "2026-10-18T14:45:20.318940+0000",
+    "flow_id": 1749203851640395,
+    "in_iface": "ens160",
+    "event_type": "alert",
+    "src_ip": "192.168.198.128",
+    "src_port": 49166,
+    "dest_ip": "192.168.198.132",
+    "dest_port": 80,
+    "proto": "TCP",
+    "pkt_src": "wire/pcap",
+    "alert": {
+      "action": "allowed",
+      "gid": 1,
+      "signature_id": 2100528,
+      "rev": 9,
+      "signature": "GPL SCAN nmap TCP",
+      "category": "Attempted Information Leak",
+      "severity": 3
+    },
+    "tcp": {
+      "tcp_flags": "29",
+      "fin": true,
+      "psh": true,
+      "urg": true
+    }
+  },
+  {
+    "timestamp": "2026-10-18T14:45:21.742119+0000",
+    "flow_id": 1749203851640512,
+    "in_iface": "ens160",
+    "event_type": "alert",
+    "src_ip": "192.168.198.128",
+    "src_port": 49178,
+    "dest_ip": "192.168.198.132",
+    "dest_port": 80,
+    "proto": "TCP",
+    "tx_id": 0,
+    "pkt_src": "wire/pcap",
+    "alert": {
+      "action": "allowed",
+      "gid": 1,
+      "signature_id": 2009582,
+      "rev": 4,
+      "signature": "ET SCAN Nmap Scripting Engine User-Agent Detected (Nmap Scripting Engine)",
+      "category": "Web Application Attack",
+      "severity": 1
+    },
+    "http": {
+      "hostname": "192.168.198.132",
+      "url": "/",
+      "http_user_agent": "Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)",
+      "http_method": "GET",
+      "protocol": "HTTP/1.1",
+      "status": 404,
+      "length": 196
+    },
+    "app_proto": "http"
+  },
+  {
+    "timestamp": "2026-10-18T14:45:22.912401+0000",
+    "flow_id": 1749203851640688,
+    "in_iface": "ens160",
+    "event_type": "alert",
+    "src_ip": "fe80:0000:0000:0000:1467:52f3:5b1b:b3f2",
+    "dest_ip": "fe80:0000:0000:0000:020c:29ff:fe8a:4c19",
+    "proto": "IPv6-ICMP",
+    "icmp_type": 128,
+    "icmp_code": 0,
+    "pkt_src": "wire/pcap",
+    "alert": {
+      "action": "allowed",
+      "gid": 1,
+      "signature_id": 9000001,
+      "rev": 1,
+      "signature": "TEST_ALERT: Ping detected from Kali",
+      "category": "Misc activity",
+      "severity": 3
+    }
+  },
+  {
+    "timestamp": "2026-10-18T14:46:02.084512+0000",
+    "flow_id": 1749203851641024,
+    "in_iface": "ens160",
+    "event_type": "ssh",
+    "src_ip": "192.168.198.128",
+    "src_port": 51204,
+    "dest_ip": "192.168.198.132",
+    "dest_port": 22,
+    "proto": "TCP",
+    "pkt_src": "wire/pcap",
+    "ssh": {
+      "client": {
+        "proto_version": "2.0",
+        "software_version": "paramiko_3.4.0"
+      },
+      "server": {
+        "proto_version": "2.0",
+        "software_version": "OpenSSH_8.7"
+      }
+    }
+  },
+  {
+    "timestamp": "2026-10-18T14:46:04.519302+0000",
+    "flow_id": 1749203851641024,
+    "in_iface": "ens160",
+    "event_type": "flow",
+    "src_ip": "192.168.198.128",
+    "src_port": 51204,
+    "dest_ip": "192.168.198.132",
+    "dest_port": 22,
+    "proto": "TCP",
+    "app_proto": "ssh",
+    "flow": {
+      "pkts_toserver": 14,
+      "pkts_toclient": 12,
+      "bytes_toserver": 1842,
+      "bytes_toclient": 2190,
+      "start": "2026-10-18T14:46:02.011044+0000",
+      "end": "2026-10-18T14:46:04.518910+0000",
+      "age": 2,
+      "state": "closed",
+      "reason": "fin",
+      "alerted": false
+    },
+    "tcp": {
+      "tcp_flags": "1b",
+      "syn": true,
+      "fin": true,
+      "psh": true,
+      "ack": true,
+      "state": "closed"
     }
   }
 ]

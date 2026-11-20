@@ -29,7 +29,7 @@ If you're a student, a SOC analyst, or a threat hunter, this dataset is built fo
 > [!NOTE]
 > **Dataset Architecture & Log Schemas:**
 > - **Synthetic Educational Datasets:** The `.zip` archives in the primary folders use a simplified, uniform key-value text format with explicit ground-truth labels (`attack="SIMULATED_*"`). This simplified schema is intentionally designed for beginner-to-intermediate grep, regex, and baseline log parsing exercises without the overhead of full enterprise XML/JSON schemas.
-> - **Production Telemetry Samples:** For authentic, production-grade schemas, explore the [`real_lab_samples/`](real_lab_samples/) directory containing raw, unmodified logs exported directly from live SOC lab environments: Microsoft Sysmon EID 1 Process Creation JSON (`windows_sysmon_process_creation.json`), Windows Security Event 4625/4624 Audit JSON (`windows_security_logon_4625.json`), and Suricata NIDS `eve.json` (`suricata_nids_eve.json`).
+> - **Enterprise-Schema Lab Telemetry (`real_lab_samples/`):** For nested, production-grade schemas, explore the [`real_lab_samples/`](real_lab_samples/) directory containing curated, sanitized multi-event JSON samples modeled on our Wazuh + Windows 11 + Rocky Linux 9 home lab: Microsoft Sysmon EID 1 Process Creation JSON (`windows_sysmon_process_creation.json`), Windows Security Event 4625/4624 Audit JSON (`windows_security_logon_4625.json`), and Suricata NIDS `eve.json` (`suricata_nids_eve.json`).
 
 ## 📋 Table of Contents
 
@@ -89,7 +89,7 @@ SOC-Log-Analysis-Datasets/
 │   ├── ids_ips_alerts.log.zip
 │   ├── proxy_access.log.zip
 │   └── vpn_access.log.zip
-├── real_lab_samples/                        # Authentic enterprise JSON logs from live labs
+├── real_lab_samples/                        # Multi-event enterprise-schema lab JSON samples
 │   ├── windows_sysmon_process_creation.json # Sysmon Event ID 1 (T1059.001)
 │   ├── windows_security_logon_4625.json     # Windows Event ID 4625/4624 (T1110.001)
 │   ├── suricata_nids_eve.json               # Suricata NIDS EVE JSON (T1046)
